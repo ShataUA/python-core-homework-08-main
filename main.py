@@ -19,8 +19,8 @@ def get_birthdays_per_week(users):
         if today.weekday() == 0:
             if birthday_this_year == today - timedelta(days=1) or birthday_this_year == today - timedelta(days=2):
                 birthdays_per_week['Monday'].append(name)
-            elif birthday_day_in_week in [5, 6]:
-                continue
+            # elif birthday_day_in_week in [5, 6]:
+            #     continue
         if today <= birthday_this_year <= next_week:
             if today.weekday() != 0 and birthday_day_in_week in [5, 6]:
                 birthdays_per_week['Monday'].append(name)
